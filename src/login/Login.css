@@ -1,0 +1,204 @@
+.login .formulario {
+  --font-color: #fefefe;
+  --font-color-sub: #7e7e7e;
+  --bg-color: #111;
+  --main-color: #fefefe;
+  padding: 20px;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.login .nome-app {
+  color: var(--font-color-sub);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.login .titulo {
+  color: var(--font-color);
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.login .titulo span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.login .campo {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.login .campo::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.login .campo:focus {
+  border: 2px solid var(--main-color);
+  outline: none;
+}
+
+.login .campo-senha {
+  position: relative;
+  display: inline-block;
+}
+
+.login .campo-senha .campo {
+  padding-right: 44px;
+  width: 250px;
+}
+
+.login .alternar-senha {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--font-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .alternar-senha:hover {
+  color: var(--font-color);
+}
+
+.login .alternar-senha:focus {
+  outline: none;
+}
+
+.login .entrar-visitante {
+  background: none;
+  border: none;
+  color: var(--font-color-sub);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 0;
+  text-decoration: underline;
+}
+
+.login .entrar-visitante:hover {
+  color: var(--font-color);
+}
+
+.login .entrar-visitante:focus {
+  outline: none;
+}
+
+.login .mensagem-area {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .mensagem {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 5px;
+  line-height: 1.4;
+  animation: mensagem-entrar 0.3s ease-out;
+}
+
+@keyframes mensagem-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login .mensagem-erro {
+  color: #ffb3b3;
+  background: rgba(200, 60, 60, 0.2);
+  border: 1px solid rgba(200, 60, 60, 0.5);
+}
+
+.login .mensagem-destaque {
+  display: block;
+  text-align: center;
+}
+
+.login .mensagem-sucesso {
+  color: #a8e6a8;
+  background: rgba(60, 140, 60, 0.2);
+  border: 1px solid rgba(60, 140, 60, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login .icone-sucesso {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.login .icone-sucesso svg {
+  width: 18px;
+  height: 18px;
+  color: #6fcf6f;
+}
+
+.login .icone-olho {
+  width: 20px;
+  height: 20px;
+}
+
+.login .botao-confirmar:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.login .botao-confirmar {
+  margin: 50px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login .botao-confirmar:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px var(--main-color);
+}
